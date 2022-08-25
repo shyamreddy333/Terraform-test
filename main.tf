@@ -36,7 +36,7 @@ resource "azurerm_application_insights" "sc_app_insights" {
 resource "azurerm_monitor_diagnostic_setting" "diag" {
   name                        = "monitoring"
   target_resource_id          = azurerm_spring_cloud_service.sc.id
-  log_analytics_workspace_id  = "${var.law_id}"
+  log_analytics_workspace_id  = azurerm_log_analytics_workspace.sc_law.id
 
   log {
     category = "ApplicationConsole"
@@ -69,12 +69,6 @@ resource "azurerm_spring_cloud_service" "sc" {
   resource_group_name = "${var.rgname}"
   location            = "${var.rglocation}"
   
-  network {
-    app_subnet_id                               = "${var.app_subnet_id}"
-    service_runtime_subnet_id                   = "${var.service_runtime_subnet_id}"
-    cidr_ranges                                 = "${var.sc_cidr}"
-    app_network_resource_group                  = "${var.sc_service_name}-apps-rg"
-    service_runtime_network_resource_group      = "${var.sc_service_name}-runtime-rg"
   }
   
   timeouts {
@@ -87,10 +81,3 @@ resource "azurerm_spring_cloud_service" "sc" {
   }
   
 }
-
-
-
-
-
-
-
