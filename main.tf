@@ -69,9 +69,7 @@ resource "azurerm_spring_cloud_service" "sc" {
   resource_group_name = "${var.rgname}"
   location            = "${var.rglocation}"
   
-  }
-  
-  }
+}
 
   trace {
     connection_string   = azurerm_application_insights.sc_app_insights.connection_string
