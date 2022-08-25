@@ -14,8 +14,8 @@ variable "logs_id"{
     type = bool
     description = "log analytics ID"
 }
-variable "logs_id"{
-    type = bool
+variable "logs_name"{
+    type = string
     description = "log analytics name"
 }
 variable "sc_service_name"{
@@ -31,7 +31,7 @@ variable "service_runtime_subnet_id"{
     description = "service_runtime_subnet_id"
 }
 variable "sc_cidr"{
-    type = bool
+    type = list(string)
     description = "sc_cidr"
 }
 
