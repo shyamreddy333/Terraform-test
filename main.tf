@@ -80,4 +80,4 @@ resource "azurerm_spring_cloud_service" "sc" {
     connection_string   = azurerm_application_insights.sc_app_insights.connection_string
   }
   
-}
+
