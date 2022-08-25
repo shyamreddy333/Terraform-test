@@ -59,7 +59,7 @@ resource "azurerm_log_analytics_workspace" "sc_law" {
 resource "azurerm_spring_cloud_service" "sc" {
   name                = "${var.sc_service_name}" 
   resource_group_name = "${var.rgname}"
-  location            = "${var.location}"
+  location            = "${var.rglocation}"
   
   network {
     app_subnet_id                               = "${var.app_subnet_id}"
