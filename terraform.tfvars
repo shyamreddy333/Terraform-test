@@ -1,7 +1,7 @@
 rgname = "PA-Dev"
 rglocation = "eastUS"
 app_insights_name = "SpringApp_Insights"
-logs_id = ""
+law_id = ""
 law_name = "Dev_logAnalyticsWorkspace"
 sc_service_name = "spring_app_name"
 app_subnet_id = ""
