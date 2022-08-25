@@ -27,7 +27,7 @@ resource "azurerm_application_insights" "sc_app_insights" {
 
 resource "azurerm_monitor_diagnostic_setting" "diag" {
   name                        = "monitoring"
-  target_resource_id          = azurerm_spring_cloud_service.spring_app.id
+  target_resource_id          = azurerm_spring_cloud_service.sc.id
   log_analytics_workspace_id  = "${var.law_id}"
 
   log {
