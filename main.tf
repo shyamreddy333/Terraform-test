@@ -14,7 +14,7 @@ provider "azurerm" {
 
 # Create a resource group
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.rgname}"
+  name     = "${var.rgname}-${lower(terraform.workspace)}"
   location = "${var.rglocation}"
 }
 
