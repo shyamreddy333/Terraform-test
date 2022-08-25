@@ -71,9 +71,6 @@ resource "azurerm_spring_cloud_service" "sc" {
   
   }
   
-  timeouts {
-      create = "60m"
-      delete = "2h"
   }
 
   trace {
