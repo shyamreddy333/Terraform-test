@@ -10,11 +10,11 @@ variable "app_insights_name"{
     type = string
     description = "app_insights_name"
 }
-variable "logs_id"{
+variable "law_id"{
     type = bool
     description = "log analytics ID"
 }
-variable "logs_name"{
+variable "law_name"{
     type = string
     description = "log analytics name"
 }
