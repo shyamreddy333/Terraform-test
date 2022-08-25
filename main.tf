@@ -11,6 +11,14 @@ terraform {
 provider "azurerm" {
   features {}
 }
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "cloud-shell-storage-centralindia"
+    storage_account_name = "csg10032002176a1b4f"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
+}
 
 # Create a resource group
 resource "azurerm_resource_group" "rg" {
