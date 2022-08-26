@@ -1,5 +1,5 @@
 rgname = "padev"
-rglocation = "eastUS"
+rglocation = "eastus"
 app_insights_name = "springAppinsights"
 law_name = "devloganalyticsworkspace"
 sc_service_name = "devappservice"
