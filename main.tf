@@ -57,7 +57,7 @@ resource "azurerm_monitor_diagnostic_setting" "diag" {
 }
 
 resource "azurerm_log_analytics_workspace" "sc_law" {
-  name                = "${var.law_name}"
+  name                = "Dev_logAnalyticsWorkspace"
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
   sku                 = "PerGB2018"
@@ -65,7 +65,7 @@ resource "azurerm_log_analytics_workspace" "sc_law" {
 }
 
 resource "azurerm_spring_cloud_service" "sc" {
-  name                = "${var.sc_service_name}" 
+  name                = "spring_app_name" 
   resource_group_name = "${var.rgname}"
   location            = "${var.rglocation}"
   
