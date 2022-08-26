@@ -22,7 +22,7 @@ terraform {
 
 # Create a resource group
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.rgname}-${lower(terraform.workspace)}"
+  name     = "${var.rgname}"
   location = "${var.rglocation}"
 }
 
