@@ -1,5 +1,5 @@
 rgname = "PA-Dev"
 rglocation = "eastUS"
-app_insights_name = "SpringApp_Insights"
-law_name = "Dev_logAnalyticsWorkspace"
-sc_service_name = "spring_app_name"
+app_insights_name = "SpringAppInsights"
+law_name = "DevlogAnalyticsWorkspace"
+sc_service_name = "DevAppService"
