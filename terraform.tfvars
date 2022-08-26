@@ -1,4 +1,4 @@
-rgname = "padev"
+rgname = "padev1"
 rglocation = "eastus"
 app_insights_name = "springAppinsights"
 law_name = "devloganalyticsworkspace"
