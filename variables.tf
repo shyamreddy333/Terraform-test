@@ -30,9 +30,5 @@ variable "sc_bastion_host"{
     type = string
     description = "sc_bastion_host"
 }
-variable "azure_bastion_subnet"{
-    type = string
-    description = "azure_bastion_subnet name"
-}
 
 
