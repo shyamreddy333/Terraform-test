@@ -45,7 +45,7 @@ resource "azurerm_public_ip" "sc_pip" {
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
   allocation_method   = "Static"
-  sku                 = "Basic"
+  sku                 = "Standard"
 }
 
 resource "azurerm_bastion_host" "bastion_host" {
