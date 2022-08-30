@@ -49,7 +49,7 @@ resource "azurerm_public_ip" "sc_pip" {
 }
 
 resource "azurerm_bastion_host" "bastion_host" {
-  name                = "${var.sc_bastion}"
+  name                = "${var.sc_bastion_host}"
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
 
