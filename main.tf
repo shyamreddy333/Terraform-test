@@ -28,7 +28,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_virtual_network" "sc_vnet1" {
   name                = "sc_vnet"
-  address_space       = ["192.168.1.0/16"]
+  address_space       = ["192.168.0.0/16"]
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
 }
