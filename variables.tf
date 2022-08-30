@@ -18,5 +18,17 @@ variable "sc_service_name"{
     type = string
     description = "app name"
 }
+variable "azure_bastion_subnet"{
+    type = bool
+    description = "azure_bastion_subnet"
+}
+variable "sc_pip"{
+    type = string
+    description = "sc_pip"
+}
+variable "sc_bastion_host"{
+    type = string
+    description = "sc_bastion_host"
+}
 
 
