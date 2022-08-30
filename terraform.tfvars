@@ -6,4 +6,4 @@ sc_service_name = "devappservice"
 azure_bastion_subnet = "scbastionsubnet"
 sc_pip = "bastionpip"
 sc_bastion_host = "scbastionhost"
-azure_bastion_subnet = "azurebastionsubnet"
+
