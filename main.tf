@@ -26,21 +26,21 @@ resource "azurerm_resource_group" "rg" {
   location = "${var.rglocation}"
 }
 
-resource "azurerm_virtual_network" "sc-vnet1" {
-  name                = "sc-vnet"
+resource "azurerm_virtual_network" "sc_vnet1" {
+  name                = "sc_vnet"
   address_space       = ["192.168.1.0/16"]
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
 }
 
-resource "azurerm_subnet" "sc-bastion-subnet" {
+resource "azurerm_subnet" "sc_bastion_subnet" {
   bastion_subnet_name  = "${var.azure_bastion_subnet}"
   resource_group_name  = "${var.rgname}"
-  virtual_network_name = azurerm_virtual_network.sc-vnet1.sc-vnet
+  virtual_network_name = azurerm_virtual_network.sc_vnet1.sc_vnet
   address_prefixes     = ["192.168.1.224/27"]
 }
 
-resource "azurerm_public_ip" "sc-pip" {
+resource "azurerm_public_ip" "sc_pip" {
   name                = "${var.sc_pip}"
   location            = "${var.rglocation}"
   resource_group_name = "${var.rgname}"
@@ -55,8 +55,8 @@ resource "azurerm_bastion_host" "bastion_host" {
 
   ip_configuration {
     name                 = "configuration"
-    subnet_id            = azurerm_subnet.sc-bastion-subnet.id
-    public_ip_address_id = azurerm_public_ip.sc-pip.id
+    subnet_id            = azurerm_subnet.sc_bastion_subnet.id
+    public_ip_address_id = azurerm_public_ip.sc_pip.id
   }
 }
 
