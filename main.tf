@@ -36,7 +36,7 @@ resource "azurerm_virtual_network" "sc_vnet1" {
 resource "azurerm_subnet" "sc_bastion_subnet" {
   bastion_subnet_name  = "${var.azure_bastion_subnet}"
   resource_group_name  = "${var.rgname}"
-  virtual_network_name = azurerm_virtual_network.sc_vnet1.sc_vnet
+  virtual_network_name = azurerm_virtual_network.sc_vnet1.name
   address_prefixes     = ["192.168.1.224/27"]
 }
 
